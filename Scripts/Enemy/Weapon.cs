@@ -7,24 +7,14 @@ public class Weapon : MonoBehaviour
     [SerializeField] private Bullet _bullet;
     [SerializeField] private Cartridge _cartridge;
     [SerializeField] private Music _shoot;
-    [SerializeField] private EnemyVision _enemyVision;
     [SerializeField] private float _speed;
 
     private float _time;
 
     private void Start()
     {
+        OnSeePlayer();
         _time = 0;
-    }
-
-    private void OnEnable()
-    {
-        _enemyVision.SeePlayer += OnSeePlayer;
-    }
-
-    private void OnDisable()
-    {
-        _enemyVision.SeePlayer -= OnSeePlayer;
     }
 
     public void GenerateBullet()
@@ -39,7 +29,7 @@ public class Weapon : MonoBehaviour
         _spawnEffect.transform.Rotate(0, axisY, 0);
     }
 
-    public void OnSeePlayer()
+    private void OnSeePlayer()
     {
         InvokeRepeating(nameof(GenerateBullet), 1, 3);
     }

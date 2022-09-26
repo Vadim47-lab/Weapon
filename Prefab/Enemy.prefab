@@ -10,10 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6998872315777117830}
   - component: {fileID: 6998872315777117831}
-  - component: {fileID: 8249705752108749096}
-  - component: {fileID: 7392991753171637477}
   - component: {fileID: 6998872315777117824}
-  - component: {fileID: 1452567120}
   m_Layer: 0
   m_Name: Spawn
   m_TagString: Untagged
@@ -49,37 +46,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playback: {fileID: 8300000, guid: e82d18105959cf1408e0d3c49a2a2a10, type: 3}
   _audioSource: {fileID: 6998872315777117824}
---- !u!114 &8249705752108749096
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6998872315777117829}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 592d880583f2c974bbb55abc6d996488, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetTag: Player
-  rays: 8
-  distance: 33
-  angle: 40
-  offset: {x: 0, y: 0, z: 0}
-  target: {fileID: 0}
---- !u!114 &7392991753171637477
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6998872315777117829}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 911ec593fc240f942815812c5db136a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
 --- !u!82 &6998872315777117824
 AudioSource:
   m_ObjectHideFlags: 0
@@ -176,28 +142,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!195 &1452567120
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6998872315777117829}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!1 &6998872317302274044
 GameObject:
   m_ObjectHideFlags: 0
@@ -334,7 +278,7 @@ MonoBehaviour:
   _bullet: {fileID: 1391940701939152627, guid: deafafd5c86b2534eae0874545ba958b, type: 3}
   _cartridge: {fileID: 4302247149412021599}
   _shoot: {fileID: 6998872315777117831}
-  _enemyVision: {fileID: 8249705752108749096}
+  _enemyVision: {fileID: 0}
   _speed: 15
 --- !u!114 &4302247149412021599
 MonoBehaviour:
