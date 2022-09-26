@@ -4,15 +4,16 @@
 public class WaypointMovement : MonoBehaviour
 {
     [SerializeField] private GameObject _enemy;
+    [SerializeField] private Weapon _weapon;
     [SerializeField] private Transform _path;
     [SerializeField] private float _speed;
 
+    private Transform[] _points;
+    private Animator _animator;
     private readonly string _run1 = "_Run1";
     private readonly string _run2 = "_Run2";
-
-    private Transform[] _points;
     private int _currentPoint;
-    private Animator _animator;
+    private bool _moveObject = true;
 
     private void Start()
     {
@@ -28,6 +29,9 @@ public class WaypointMovement : MonoBehaviour
 
     private void Update()
     {
+        float axisX;
+        float axisY;
+
         Transform target = _points[_currentPoint];
 
         transform.position = Vector3.MoveTowards(transform.position, target.position, _speed * Time.deltaTime);
@@ -41,15 +45,31 @@ public class WaypointMovement : MonoBehaviour
             }
         }
 
-        if (_enemy.transform.position.x < target.transform.position.x)
+        if (_enemy.transform.position.x > target.transform.position.x)
         {
-            _animator.SetBool(_run2, false);
-            _animator.SetBool(_run1, true);
+            if (_moveObject == true) 
+            {
+                axisX = -2.98f;
+                axisY = 0;
+                _weapon.MoveObject(axisX, axisY);
+                _moveObject = false;
+            }
+
+            _animator.SetBool(_run1, false);
+            _animator.SetBool(_run2, true);
         }
         else
         {
-            _animator.SetBool(_run1, false);
-            _animator.SetBool(_run2, true);
+            if (_moveObject == false)
+            {
+                axisX = 2.82f;
+                axisY = 180;
+                _weapon.MoveObject(axisX, axisY);
+                _moveObject = true;
+            }
+
+            _animator.SetBool(_run2, false);
+            _animator.SetBool(_run1, true);
         }
     }
 }

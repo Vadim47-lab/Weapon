@@ -181,8 +181,8 @@ GameObject:
   - component: {fileID: 2308331985195868731}
   - component: {fileID: 9071526698084768667}
   - component: {fileID: 7635134834472265211}
-  - component: {fileID: 8736208065563183320}
-  - component: {fileID: 388684853450065761}
+  - component: {fileID: 413587405463016617}
+  - component: {fileID: 7467607737304238074}
   - component: {fileID: 8857324767587204062}
   - component: {fileID: 16912790}
   m_Layer: 0
@@ -286,7 +286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4901f2961056f7844bf3093296de788c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _menu: {fileID: 0}
+  _health: {fileID: 2308331985195868731}
 --- !u!114 &3321814350198152306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -315,7 +315,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _hit: {fileID: 9071526698084768667}
   _minHealth: 0
-  _maxHealth: 50
+  _maxHealth: 100
 --- !u!114 &9071526698084768667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -349,7 +349,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!60 &8736208065563183320
+--- !u!60 &413587405463016617
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -374,17 +374,19 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.53333336, y: 0.73333335}
+    - - {x: 0.48500782, y: 0.669747}
       - {x: 0.16666667, y: 1.1}
-      - {x: -0.16666667, y: 1.1}
-      - {x: -0.53333336, y: 0.73333335}
-      - {x: -0.6333334, y: 0.20000002}
-      - {x: -0.6333334, y: -0.90000004}
+      - {x: -0.12597148, y: 1.1025435}
+      - {x: -0.40870434, y: 0.76385486}
+      - {x: -0.5265085, y: 0.38567206}
+      - {x: -0.63282394, y: -0.3244381}
+      - {x: -0.61552924, y: -0.8516745}
       - {x: -0.5, y: -1.1}
       - {x: 0.53333336, y: -1.1}
-      - {x: 0.6333334, y: -0.9666667}
-      - {x: 0.6333334, y: 0.20000002}
---- !u!60 &388684853450065761
+      - {x: 0.64200306, y: -0.7429273}
+      - {x: 0.6384203, y: -0.4045639}
+      - {x: 0.56466025, y: 0.057566613}
+--- !u!60 &7467607737304238074
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -409,16 +411,16 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.5537334, y: 0.7578138}
-      - {x: 0.16666667, y: 1.1204004}
-      - {x: -0.17890708, y: 1.1122404}
-      - {x: -0.561894, y: 0.7455735}
-      - {x: -0.661894, y: 0.19591996}
-      - {x: -0.67413443, y: -0.953041}
+    - - {x: 0.53333336, y: 0.73333335}
+      - {x: 0.16666667, y: 1.1}
+      - {x: -0.16666667, y: 1.1}
+      - {x: -0.53333336, y: 0.73333335}
+      - {x: -0.6333334, y: 0.20000002}
+      - {x: -0.6333334, y: -0.90000004}
       - {x: -0.5, y: -1.1}
       - {x: 0.53333336, y: -1.1}
-      - {x: 0.661894, y: -0.99930716}
-      - {x: 0.65373343, y: 0.1918399}
+      - {x: 0.6333334, y: -0.9666667}
+      - {x: 0.6333334, y: 0.20000002}
 --- !u!50 &8857324767587204062
 Rigidbody2D:
   serializedVersion: 4
@@ -453,7 +455,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
-  m_Pitch: -2
+  m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0

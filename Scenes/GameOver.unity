@@ -300,14 +300,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameOverScreen
       objectReference: {fileID: 0}
-    - target: {fileID: 3126478498978467128, guid: e60cd3333e53b36469b0ffa168d64835, type: 3}
-      propertyPath: _playback
-      value: 
-      objectReference: {fileID: 8300000, guid: 288c0897228fc414488d98840a92a639, type: 3}
-    - target: {fileID: 3126478498978467128, guid: e60cd3333e53b36469b0ffa168d64835, type: 3}
-      propertyPath: _audioSource
-      value: 
-      objectReference: {fileID: 2056342449}
     - target: {fileID: 8118770640909639197, guid: e60cd3333e53b36469b0ffa168d64835, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -482,8 +474,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &2056342449 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 2680236134669231976, guid: e60cd3333e53b36469b0ffa168d64835, type: 3}
-  m_PrefabInstance: {fileID: 1264961732}
-  m_PrefabAsset: {fileID: 0}

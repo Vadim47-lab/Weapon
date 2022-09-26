@@ -210,9 +210,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44aa41c30fc0fa945a08d8bd99cd1633, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _present: {fileID: 0}
-  _press: {fileID: 0}
-  _toy: {fileID: 0}
+  _present: {fileID: 5045203934798263520}
+  _press: {fileID: 5034444730257129354}
+  _toy: {fileID: 9002136125472782511}
   _presentButton: {fileID: 0}
 --- !u!114 &5034444730257129354
 MonoBehaviour:
@@ -226,8 +226,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc5be193e06ccf44da0faf8122a55c6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playback: {fileID: 0}
-  _audioSource: {fileID: 0}
+  _playback: {fileID: 8300000, guid: de4158309d4b8dd42bccc5dd8d8e441f, type: 3}
+  _audioSource: {fileID: 8527508264263733636}
 --- !u!114 &3103566743096580966
 MonoBehaviour:
   m_ObjectHideFlags: 0

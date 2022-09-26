@@ -1,15 +1,18 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class Player : MonoBehaviour
-{ 
-    [SerializeField] private GameObject _menu;
+[RequireComponent(typeof(Health))]
+public class Player : MonoBehaviour, IDamageable
+{
+    [SerializeField] private Health _health;
 
-    private void Update()
+    public void TakeDamage(int damage)
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        _health.OnTakeDamage(damage);
+
+        if (_health.Value <= 0)
         {
-            Time.timeScale = 0;
-            _menu.SetActive(true);
+            SceneManager.LoadScene(3);
         }
     }
 }
